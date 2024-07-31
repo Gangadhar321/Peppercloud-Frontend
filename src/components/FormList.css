@@ -1,0 +1,39 @@
+/* .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .list-unstyled li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mr-2 {
+    margin-right: 10px;
+  }
+  
+  .ml-2 {
+    margin-left: 10px;
+  } */
+
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .form-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .form-buttons .btn {
+    margin-right: 10px;
+  }
+  
+  

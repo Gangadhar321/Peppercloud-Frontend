@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FormList from './components/FormList';
+import FormEditor from './components/FormEditor';
+import FormViewer from './components/FormViewer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FormList />} />
+        <Route path="/form/create" element={<FormEditor />} />
+        <Route path="/form/:id/edit" element={<FormEditor />} />
+        <Route path="/form/:id" element={<FormViewer />} />
+      </Routes>
+    </Router>
   );
 }
 
